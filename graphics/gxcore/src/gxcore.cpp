@@ -1000,8 +1000,8 @@ bool derive_walk(std::uint32_t vcd_lo, std::uint32_t vcd_hi,
       if (t < kMaxTexGens)
         out.tex_mtx_idx_mask |= static_cast<std::uint8_t>(1u << t);
       add({.kind = WalkEntry::kTexMtxIdx,
-           .out_slot = static_cast<std::uint8_t>(t),
-           .vcd_type = 1},
+           .vcd_type = 1,
+           .out_slot = static_cast<std::uint8_t>(t)},
           1u);
     }
   }
